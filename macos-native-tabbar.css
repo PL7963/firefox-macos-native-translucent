@@ -2,36 +2,34 @@
 /* Firefox Translucent Tabbar for macOS */
 /* ------------------------------------ */
 
+:root#main-window {
+   background-color: transparent !important;
+}
+
+:root:not(:-moz-window-inactive) #navigator-toolbox {
+  background-color: transparent !important; 
+}
 
 :root #TabsToolbar,
 :root #titlebar,
-:root #tabbrowser-tabs,#navigator-toolbox {
+:root #tabbrowser-tabs, #navigator-toolbox {
    -moz-appearance: -moz-mac-vibrant-titlebar-light !important;
    -moz-appearance: -moz-mac-source-list !important;
    background-color: transparent !important;
 }
 
-:root[lwt-default-theme-in-dark-mode] #navigator-toolbox > toolbar:not(#TabsToolbar) {
-	background-color: rgba(0,0,0,0.15) !important;
-}
-
-:root #navigator-toolbox > toolbar:not(#TabsToolbar) {
-	background-color: rgba(255,255,255,0.6) !important;
-}
-
-:root[lwt-default-theme-in-dark-mode] #urlbar-background {
-   background: rgba(0,0,0,0.25) !important;
-}
-
 :root #urlbar-background {
-   background: rgba(180,180,180,0.25) !important;
-}
-:root[lwt-default-theme-in-dark-mode] .urlbarView {
-   background-color: rgb(40,40,40) !important;
+   background: color-mix(in srgb, -moz-Dialog, transparent) !important;
 }
 :root .urlbarView {
-   background-color: rgb(230,230,230) !important;
+   background-color: -moz-Dialog !important;
 }
+
+/* toolbox tranparency*/
+:root #navigator-toolbox > toolbar:not(#TabsToolbar) {
+	background-color: color-mix(in srgb, -moz-Dialog, transparent) !important;
+}
+/**/
 
 /* De-emphasize tab icons and names when window is unfocused */
 :root:-moz-window-inactive .tab-content {
@@ -56,19 +54,6 @@
    -moz-appearance: -moz-mac-source-list !important;
 }
 
-:root:-moz-window-inactive[lwt-default-theme-in-dark-mode] {
-  --lwt-accent-color-inactive: rgb(40,40,40) !important;
-}
-
-:root:not([lwt-default-theme-in-dark-mode]) .tabbrowser-tab:not([selected="true"]) {
-  color: #000 !important;
-}
-
-:root[lwt-default-theme-in-dark-mode] {
-  --tab-line-color: hsla(280,30%,80%,0.9) !important;
-}
-
-
 /* improve border visiblity for selected tabs */
 .tab-background:is([selected], [multiselected]):-moz-lwtheme {
    border:  none !important;
@@ -92,5 +77,5 @@
 }
 
 :root[lwt-default-theme-in-dark-mode] #nav-bar {
-  box-shadow: 0 -1px 0 0 hsla(280,6%,0%,0.4), 0 -4px 4px -5px hsla(280,6%,0%,0.05) !important;
+  box-shadow: 0 -1px 0 0 hsla(280,6%,0%,0.3), 0 -4px 4px -5px hsla(280,6%,0%,0.05) !important;
 }
