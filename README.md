@@ -1,6 +1,6 @@
 <img alt="screenshot" src="https://github.com/PL7963/firefox-macos-native-translucent/assets/44529370/8779353d-53a2-4b2b-8105-81aefbbe5bb3">
 
-# macOS Native-looking Translucent theme for Firefox (103+)
+# macOS Native-looking Translucent theme for Firefox (121+)
 
 
 Replaces default Firefox black-and-white theme with a more native-looking light/dark compatible translucent theme. If you don't want this much translucent. Check out zvuc's [firefox-native-tabbar](https://github.com/zvuc/firefox-macos-native-tabbar).  
